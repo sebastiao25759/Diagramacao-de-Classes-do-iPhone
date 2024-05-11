@@ -1,0 +1,34 @@
+@startuml
+
+interface ReprodutorMusical {
+    + tocar()
+    + pausar()
+    + selecionarMusica()
+}
+
+interface AparelhoTelefonico {
+    + ligar()
+    + atender()
+    + iniciarCorreioVoz()
+}
+
+interface NavegadorInternet {
+    + exibirPagina()
+    + adicionarNovaAba()
+    + atualizarPagina()
+}
+
+class iPhone {
+    - reprodutorMusical: ReprodutorMusical
+    - aparelhoTelefonico: AparelhoTelefonico
+    - navegadorInternet: NavegadorInternet
+    + usarReprodutorMusical()
+    + usarAparelhoTelefonico()
+    + usarNavegadorInternet()
+}
+
+iPhone *-- ReprodutorMusical
+iPhone *-- AparelhoTelefonico
+iPhone *-- NavegadorInternet
+
+@enduml
